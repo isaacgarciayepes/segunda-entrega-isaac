@@ -174,7 +174,7 @@ def opcion_filtrar(datos):
         mostrar_tabla(filtrados, f"PRODUCTOS CON PRECIO > {PRECIO_MINIMO} ({len(filtrados)} PRODUCTOS)", formato="fancy_grid")
         mostrar_metricas(filtrados)
     else:
-        print(f"\n⚠ No hay productos con precio superior a {PRECIO_MINIMO}.")
+        print(f"\n No hay productos con precio superior a {PRECIO_MINIMO}.")
 
 
 def opcion_buscar(datos):
@@ -182,7 +182,7 @@ def opcion_buscar(datos):
     try:
         id_buscado = int(entrada)
     except ValueError:
-        print("⚠ El ID debe ser un número entero.")
+        print("El ID debe ser un número entero.")
         return
 
     fila = buscar_por_id(datos, id_buscado)
@@ -190,7 +190,7 @@ def opcion_buscar(datos):
         # Se usa formato simple/plano para evitar líneas excesivas de IA
         mostrar_tabla([fila], f"RESULTADO DE BÚSQUEDA - ID {id_buscado}", formato="simple")
     else:
-        print(f"⚠ Advertencia: el ID {id_buscado} no existe en el catálogo.")
+        print(f"Advertencia: el ID {id_buscado} no existe en el catálogo.")
 
 
 def opcion_exportar(datos):
