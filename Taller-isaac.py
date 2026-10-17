@@ -203,7 +203,7 @@ def opcion_exportar(datos):
     elif eleccion == "2":
         generar_pdf(filtrar_por_precio(datos), ARCHIVO_PDF, f"Productos con precio > {PRECIO_MINIMO}")
     else:
-        print("⚠ Opción no válida, exportación cancelada.")
+        print("Opción no válida, exportación cancelada.")
         return
     print(f"\n[ÉXITO] Archivo '{os.path.basename(ARCHIVO_PDF)}' generado correctamente.")
 
@@ -238,7 +238,7 @@ def menu():
             print("\nHasta luego.")
             break
         else:
-            print("⚠ Opción no válida. Elija un número del 1 al 5.")
+            print("Opción no válida. Elija un número del 1 al 5.")
 
 
 if __name__ == "__main__":
